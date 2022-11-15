@@ -47,79 +47,93 @@
             </div>
         </aside>
         <main>
-            <section>
-            <article class="legend">
-                <div class="texto">
-                    <fieldset>
-                        <legend>Palindromo</legend>
-                        <form action="">
-                            <label for="">Formulario</label>
-                            <input type="text" placeholder="Escribe algo....">
-                        </form>
-                    </fieldset>
-                </div>
-                <div class="fondo"></div>
-            </article>
-            <article class="legend">
-                <div class="texto">
-                    <fieldset>
-                        <legend>Numero mayor</legend>
-                        <form action="">
-                            <label for="">Formulario</label>
-                            <input type="text" placeholder="Escribe algo....">
-                        </form>
-                    </fieldset>
-                </div>
-                <div class="fondo"></div>
-            </article>
-            <article class="legend">
-                <div class="texto">
-                    <fieldset>
-                        <legend>Vocales</legend>
-                        <form action="">
-                            <label for="">Formulario</label>
-                            <input type="text" placeholder="Escribe algo....">
-                        </form>
-                    </fieldset>
-                </div>
-                <div class="fondo"></div>
-            </article>
-            <article class="legend">
-                <div class="texto">
-                    <fieldset>
-                        <legend>Numero de vocales</legend>
-                        <form action="">
-                            <label for="">Formulario</label>
-                            <input type="text" placeholder="Escribe algo....">
-                        </form>
-                    </fieldset>
-                </div>
-                <div class="fondo"></div>
-            </article>
-            <article class="legend">
-                <div class="texto">
-                    <fieldset>
-                        <legend>Ajax</legend>
-                        <form action="">
-                            <label for="">Formulario</label>
-                            <input type="text" placeholder="Escribe algo....">
-                        </form>
-                    </fieldset>
-                </div>
-                <div class="fondo"></div>
-            </article>
-            <footer class="legend" id="pie">
-                <div class="texto">
-                    <p>torom279@gmail.com</p>
-                    <p>@alextoro279</p>
-                </div>
-                <div class="fondo"></div>
-            </footer>
+            <section class="contain__section">
+
+                <form action="" class="contain__item">
+                    <div class="texto">
+                        <fieldset>
+                            <legend class="titulo">Palindromo</legend>
+                            <div class="descripcion"><p>Comprobaremos si la palabra ingresada es un palindromo o no.</p></div>
+                            <input id="inpPalindromo" type="text" placeholder="Escribe algo....">
+                            <div class="respuesta"><p style="color:green;" id="resPalindromo">respuesta</p></div>
+                        </fieldset>
+                    </div>
+                    <input id="btnPalindromo" type="button" value="Check">
+                    <input id="btnBorrar" type="button" value="Clear">
+                    <div class="fondo"></div>
+                </form>
+
+                <form action="" class="contain__item">
+                    <div class="texto">
+                        <fieldset>
+                            <legend class="titulo">El numero mayor</legend>
+                            <div class="descripcion"><p>Comparar dos numero para determinar cual es el mayor.</p></div>
+                            <input type="number" placeholder="Firs" id="inpFirstNumber">
+                            <input type="number" placeholder="Sec." id="inpSecondNumber" >
+                            <div class="respuesta"><p id="resBigNumber">respuesta</p></div>
+                        </fieldset>
+                    </div>
+                    <input id="btnIsBigNumber" type="button" value="Check">
+                    <input id="btnIsBigBorrar" type="button" value="Clear">
+                    <div class="fondo"></div>
+                </form>
+
+                <form action="" class="contain__item">
+                    <div class="texto">
+                        <fieldset>
+                            <legend class="titulo">Las vocales</legend>
+                            <div class="descripcion"><p>Determina que vocales existen dentro del parrafo que ingreses.</p></div>
+                            <input id="inpVocales" type="text" placeholder="Escribe algo....">
+                            <div class="respuesta"><p id="resVocales">respuesta</p></div>
+                        </fieldset>
+                    </div>
+                    <input id="btnVocales" type="button" value="Check">
+                    <input id="btnVocBorrar" type="button" value="Clear">
+                    <div class="fondo"></div>
+                </form>
+
+                <form action="" class="contain__item">
+                    <div class="texto">
+                        <fieldset>
+                            <legend class="titulo">Numero de vocales</legend>
+                            <div class="descripcion"><p>Cuenta el numero vocales en el texto.</p></div>
+                            <input id="inpNumVocales" type="text" placeholder="Escribe algo....">
+                            <div class="respuesta"><p id="resNumVocales">respuesta</p></div>
+                        </fieldset>
+                    </div>
+                    <input id="btnNumVocales" type="button" value="Check">
+                    <input id="btnNumVocBorrar" type="button" value="Clear">
+                    <div class="fondo"></div>
+                </form>
+
+                <form action="" class="contain__item">
+                    <div class="texto">
+                        <fieldset>
+                            <legend class="titulo">Ajax</legend>
+                            <div class="descripcion"><p>Demuestracion de una peticion al servidor con ajax.</p></div>
+                            <input id="inpAjax" type="text" placeholder="https://jsonplaceholder.typicode.com/users">
+                            <div class="respuesta"><p>respuesta</p></div>
+                        </fieldset>
+                    </div>
+                    <input id="btnAjax" type="button" value="Check">
+                    <div class="fondo"></div>
+                </form>
+                
+                <footer id="pie">
+                    <div class="texto">
+                        <p id="email">torom279@gmail.com</p>
+                        <p>@alextoro279</p>
+                    </div>
+                    <div class="fondo"></div>
+                </footer>
+
 
             </section>
         </main>
 
     </div>
+    <script type="text/javascript" src="https://code.jquery.com/jquery-3.6.1.min.js"></script>
+    <script type="text/javascript" src="../js/back.js"></script>
 </body>
 
 </html>
