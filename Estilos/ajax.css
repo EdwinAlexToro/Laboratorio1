@@ -45,32 +45,35 @@ h1{
     font-size: 10;
 }
 
+
 #ayuda{
-    background-color:  darkcyan;
-    min-width: 300px;
-    position: relative;
+    display: flex;
+    justify-content: space-between;
+}
+nav ul{
+
+    list-style-type: none;
+    display: flex;
+    justify-content: space-between;
+    font-size: 20px;
+    margin: 0%;
+    padding: 0%;
+    color: rgb(23, 59, 59);
+    
+    
+}
+nav ul li{
+    padding: 15px;
+}
+nav ul :nth-child(3){
+    background-color: darkslategray;
+    font-size: 0px;
+    height: 64px;
+}
+#desplegable{
     
 }
 
-#ayuda nav ul li{
-    float: left;
-    list-style-type: none;
-    margin: 9px;
-    font-family: 'Public Sans', sans-serif;
-    font-size: 20px;
-    /* font-family: '', Verdana, Geneva, Tahoma, sans-serif; */
-    font-weight: bolder;
-    margin-top: 20px ; 
-    color:darkslategray;
-
-}
-#ayuda nav ul{
-    margin: 0%;
-    display: flex;
-    justify-content: space-between;
-
-
-}
 
 div .flex__container--aside{
     opacity: 0%;
@@ -108,37 +111,7 @@ aside ul li{
     font-family: 'Public Sans', sans-serif;
     
 }
-aside ul a:visited{
-    padding: 20px 40px 20px 5px;
-    
-    color: rgb(169, 215, 206);
-    font-weight: bold;
-    font-family: 'Public Sans', sans-serif;
-    
-}
 
-
-nav ul a{
-    position: relative;
-    height: 64px;
-    width: 64px;
-    background-color: darkslategrey;
-    right: 0%;
-    right: 0%;
-}
-nav ul img{
-    object-fit: cover;
-    font-size: 0px;
-    vertical-align: bottom;
-    position: absolute;
-   /*  border: solid rgb(70, 66, 66); */
-    background-color: darkslategray;
-    right: 20%;
-    top: 20%;
-    
-
-    
-}
 
 main{
     /* position: absolute; */
