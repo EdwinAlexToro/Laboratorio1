@@ -1,3 +1,11 @@
+////////////////////////////////////Palindromo/////////////////////////////////////////
+
+$(function(){
+    $("#flex__container--aside").fadeOut();
+    $("#bars").click(function(){
+        $("#flex__container--aside").fadeIn();
+    });
+});
 var inpPalindromo = document.querySelector("#inpPalindromo");
 var resPalindromo = document.querySelector("#resPalindromo");
 var btnPalindromo = document.querySelector("#btnPalindromo");
@@ -31,7 +39,7 @@ btnPalindromo.addEventListener('click', function () {
     });
     
 });
-
+////////////////////////////////////Numero mayor////////////////////////////////////
 
 var inpFirstNumber = document.querySelector("#inpFirstNumber");
 var inpSecondNumber = document.querySelector("#inpSecondNumber");
@@ -72,7 +80,7 @@ btnIsBigNumber.addEventListener('click', function () {
     
 });
 
-
+/////////////////////////////Vocales que existen dentro del parrafo////////////////////////////////////
 
 var inpVocales = document.querySelector("#inpVocales");
 var btnVocales = document.querySelector("#btnVocales");
@@ -117,7 +125,7 @@ btnVocales.addEventListener('click', function () {
     });
     
 });
-
+///////////////////////////Contar el numero de vocales////////////////////////
 
 
 
@@ -126,44 +134,46 @@ var btnNumVocales = document.querySelector("#btnNumVocales");
 var btnNumVocBorrar = document.querySelector("#btnNumVocBorrar");
 var resNumVocales = document.querySelector("#resNumVocales");
 
-// let dicPlantilla = {'a':0,'e':0,'i':0,'o':0,'u':0,
-//                    'á':0,'é':0,'í':0,'ó':0,'ú':0,
-//                    'Á':0,'É':0,'Í':0,'Ó':0,'Ú':0,
-//                    'A':0,'E':0,'I':0,'O':0,'U':0};
-// var pila2=  vocales(inpNumVocales.value);
 
-// $("#btnNumVocBorrar").fadeOut();
-// $("#resNumVocales").fadeOut();
+$("#btnNumVocBorrar").fadeOut();
+$("#resNumVocales").fadeOut();
 
 
-// function numVocales(paramPila,diccionario){
-//     for(let vocal of paramPila){
-//         for(const [llave, valor] of Object.entries(diccionario)){
-//             if(vocal == llave ){
-//                 diccionario[llave] += 1;
-//                 break;
-//             }
-            
-//         }
-//     }
-//     var salida= "" ;
-//     for(const[key,val] of Object.entries(diccionario)){
-//         if(val == 0){
-//             continue;
-//         }else{
-//             salida += key;
-//             salida += ":";
-//             salida += val +",";
-//         }
-//     }
-//     return salida;
-// }
+function numVocales(arr){
+    var a = ['a','á','A','Á'];
+    var e = ['e','é','E','É'];
+    var i = ['i','í','I','Í'];
+    var o = ['o','ó','O','Ó'];
+    var u = ['u','ú','U','Ú'];
+    var A= 0;
+    var E= 0;
+    var I= 0;
+    var O= 0;
+    var U= 0;
 
+    for( k of arr){
+        for( m in a){
+            if(k == a[m]){
+                A++;
+            }else if(k == e[m]){
+                E++;
+            }else if(k == i[m]){
+                I++;
+            }else if(k == o[m]){
+                O++;
+            }else if(k == u[m]){
+                U++;
+            }else{
+                continue;
+            }
+        }
+    }
+    let salida = ("a:"+A+"  e:"+E+"  i:"+I+"  o:"+O+"  u:"+U);
+    return salida;
+}
 
 btnNumVocales.addEventListener('click', function () {
-    var dicActual = dicPlantilla;
-    resNumVocales.innerHTML =numVocales(pila2, dicActual);
-    
+    resNumVocales.innerHTML= numVocales(inpNumVocales.value);
     $("#resNumVocales").fadeIn();
     $("#btnNumVocales").fadeOut();
     $("#btnNumVocBorrar").fadeIn();
