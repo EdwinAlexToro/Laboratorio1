@@ -71,22 +71,11 @@ nav ul :nth-child(3){
     height: 64px;
 }
 
-
-div .flex__container--aside{
-    opacity: 0%;
-    background-color: darkslategray;
-    position: absolute;
-    top: 64px;
-    right: 0px;
-    box-shadow: 0px 5px 5px 5px rgb(79, 111, 121);
-    z-index: 50;
-
-}
 aside{
     transition: all 1s ;
 }
 
-.flex__container--aside:hover{
+#flex__container--aside{
     opacity: 100%;
     background-color: darkslategray;
     position: absolute;

@@ -1,7 +1,6 @@
-$(function(){
-
-    $("#desplegable").click(function(){
-        $(".flex__container--aside").toggle();
-
-    });
-});
+// $(function(){
+//     $("#flex__container--aside").fadeOut();
+//     $("#bars").click(function(){
+//         $("#flex__container--aside").fadeIn();
+//     });
+// });
