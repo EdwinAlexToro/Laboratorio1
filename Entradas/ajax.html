@@ -110,12 +110,24 @@
                     <div class="texto">
                         <fieldset>
                             <legend class="titulo">Ajax</legend>
-                            <div class="descripcion"><p>Demuestracion de una peticion al servidor con ajax.</p></div>
+                            <div class="descripcion"><p>Demostracion, peticion a un servidor con ajax.</p></div>
                             <input id="inpAjax" type="text" placeholder="https://jsonplaceholder.typicode.com/users">
-                            <div class="respuesta"><p>respuesta</p></div>
+                            <div  class="state__container"><p id="state__peticion">status</p></div>
+                            <input id="btnAjax" type="button" value="Check">
+                            <div class="http__code--container">
+                                <p id="http__response">codigo http</p>
+                            </div>
+                            <div class="ajax__response--container">
+                                <ol id="ajax__response">
+                                    <li>Nombre: Maria Fernandez</li>
+                                    <li>DNI: 398493029</li>
+                                    <li>Ciudad: Santa Marta</li>
+                                </ol>
+                            </div>
+                            
                         </fieldset>
                     </div>
-                    <input id="btnAjax" type="button" value="Check">
+                    
                     <div class="fondo"></div>
                 </form>
                 

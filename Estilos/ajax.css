@@ -38,7 +38,7 @@ h1{
     
 }
 #logo h1{
-    color:rgb(196, 187, 99) ;
+    color:yellowgreen;
     padding-top: 10px;
     margin-top: 5px;
     margin-bottom: 5px;
@@ -207,18 +207,61 @@ label{
 #inpAjax::placeholder{
     font-size: medium;
 }
-.respuesta{
-    font-size: 30px;
-    color: azure;
-}
+
 [type="button"]{
     font-size: 30px;
-    background: linear-gradient(#434343, #444346, #0c2039);
-    color: rgb(206, 206, 206);
-    border: 2px solid #cfcfcf;
+    background: linear-gradient(#384848, #444346, #0c2039);
+    color: rgb(176, 181, 180);
+    border: 1px solid #959595;
     line-height: 2;
     border-radius: 5px;
 }
+
+.http__code--container{
+    width: auto;
+    margin-left: auto;
+    margin-right: auto;
+
+}
+
+#http__response{
+    font-size: 35px;
+    color: rgb(0, 0, 0);
+    padding: 5px;
+    margin: 5px;
+    background-color: rgb(79, 111, 121);
+    text-decoration: none;
+    /* -webkit-text-stroke: 1px rgb(189, 243, 254); */
+    /* color: transparent;  */
+
+}
+
+.ajax__response--container{
+    font-size: 20px;
+    color: rgba(120, 185, 204, 0.984);
+    border: 2px solid rgb(105, 114, 160);
+    border-radius: 5px;
+    background-color: #002971;
+    margin-top: 10px;
+}
+#ajax__response{
+    font-size: 20px;
+    color: azure;
+}
+.state__container{
+    width: auto;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+#state__peticion{
+    font-size: 35px;
+    color: yellowgreen;
+    padding: 5px;
+    margin: 5px;
+    background-color: rgb(79, 111, 121);
+}
+
 #pie{
     display: flex;
     justify-content: center;
