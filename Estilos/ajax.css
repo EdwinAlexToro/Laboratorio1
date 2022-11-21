@@ -207,26 +207,6 @@ label{
 #inpAjax::placeholder{
     font-size: medium;
 }
-.respuesta{
-    font-size: 20px;
-    color: azure;
-}
-
-.respuestaAjax{
-    font-size: 20px;
-    color: rgba(120, 185, 204, 0.984);
-    border: 2px solid rgb(105, 114, 160);
-    border-radius: 5px;
-    background-color: #002971;
-    margin-top: 10px;
-}
-#reqStatus{
-    font-size: 35px;
-    color: yellowgreen;
-    padding: 5px;
-    margin: 5px;
-    background-color: rgb(79, 111, 121);
-}
 
 [type="button"]{
     font-size: 30px;
@@ -236,6 +216,52 @@ label{
     line-height: 2;
     border-radius: 5px;
 }
+
+.http__code--container{
+    width: auto;
+    margin-left: auto;
+    margin-right: auto;
+
+}
+
+#http__response{
+    font-size: 35px;
+    color: rgb(0, 0, 0);
+    padding: 5px;
+    margin: 5px;
+    background-color: rgb(79, 111, 121);
+    text-decoration: none;
+    /* -webkit-text-stroke: 1px rgb(189, 243, 254); */
+    /* color: transparent;  */
+
+}
+
+.ajax__response--container{
+    font-size: 20px;
+    color: rgba(120, 185, 204, 0.984);
+    border: 2px solid rgb(105, 114, 160);
+    border-radius: 5px;
+    background-color: #002971;
+    margin-top: 10px;
+}
+#ajax__response{
+    font-size: 20px;
+    color: azure;
+}
+.state__container{
+    width: auto;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+#state__peticion{
+    font-size: 35px;
+    color: yellowgreen;
+    padding: 5px;
+    margin: 5px;
+    background-color: rgb(79, 111, 121);
+}
+
 #pie{
     display: flex;
     justify-content: center;

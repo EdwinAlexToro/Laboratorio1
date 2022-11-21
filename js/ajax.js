@@ -1,41 +1,122 @@
 var inpAjax = document.querySelector('#inpAjax');
 var btnAjax = document.querySelectorAll('#btnAjax');
-var reqStatus = document.querySelector('#reqStatus');
-var resAjax = document.querySelector('#resAjax');
+var state__peticion = document.querySelector('#state__peticion');
+var http__response = document.querySelector('#http__response');
+var ajax__response = document.querySelector('#ajax__response');
 
 
-//se crea el objeto para realizar la peticion
 
-var xhr = new XMLHttpRequest();
 
-//Se obtiene el elemento del documento donde ira la respuesta en la pagina
+function peticionAjax(url){
 
-var resAjax = document.getElementById('resAjax');
+    ///Condicional para comprobar la URL
+    
+    if(url == "" || url == 0 || url == null ){
 
-//Se crea el fracmento que hará parte del documento
+        state__peticion.innerHTML = "Comporbando";
 
-var fracmento = document.createDocumentFragment();
+        setTimeout(function(){
 
-btnAjax.addEventListener('oneclick',function(){
-    xhr.open('GET', 'https://jsonplaceholder.typicode.com/users');
-xhr.onload = (e) => {
-    if(xhr.readyState === 4){
-        if(xhr.status == 200){
-            console.log(xhr.responseText);
-        }
+            console.log("Error");
+            state__peticion.innerHTML = "Error";
+            $(".http__code--container").fadeIn();
+            http__response.innerHTML = "Ingresa una URL valida";
 
-    }else{
-        console.error(xhr.statusText);
+        },500);
 
+        
+        //Comprobar si hay algun resultado en pantalla
+        //Antes de iniciar una nueva peticion
+    }else if(state__peticion == ""){
+        (() => { 
+
+            //Crear objeto XHR
+            const XHR = new XMLHttpRequest();
+
+            //Guardar en una variable El nodo para la respuesta Http
+            const $xhr = document.getElementById("ajax__response");
+
+            //Crea un fracmento de documento el cual sera insertado en el documento con la respuesta del servido
+            $fragmento = document.createDocumentFragment();
+
+            //Muestra por consola el objeto XHR
+            console.log(XHR);
+
+            //Crea un evento para la lectura del cambio de estado del objeto XHR
+            XHR.addEventListener("readystatechange",(e) =>{ 
+
+
+                state__peticion.innerHTML = "Comprobando...";
+                //Comprobar el estado cargando
+                if(XHR.readyState == 1){
+
+                    setTimeout(function(){
+
+                        console.log("Cargando...");
+                        return state__peticion.innerHTML = "Cargando...";
+                        },500);
+                }
+                //Comprobar estado completado
+                if(XHR.readyState == 4){
+
+                    setTimeout(function(){
+
+                        console.log("Completado...");
+                        return state__peticion.innerHTML = "Completado...";
+                    },500)
+                }
+                //Comprobar y mostrar el resultado de cabeceras de peticion
+                setTimeout(function(){
+                    //Si es una respuesta satisfactoria realiza las operaciones necesarias
+                    //para mostrar la respuesta del servidor
+                    if(XHR.status >=200 && XHR.status < 300){
+                        console.log("!! Exito");
+                        state__peticion.innerHTML = "!! Exito";
+
+                        let ajaxRes = JSON.parse(XHR.responseText);
+                        console.log(ajaxRes);
+
+                        ajaxRes.forEach(element => {
+                            const $li = document.createElement("li");
+                            $li.className = "lista";
+                            $li.innerHTML = `
+                            Nombre: ${element.name} <br>
+                            Email: ${element.email} <br>
+                            Télefono: ${element.phone} <br>`;
+
+                            $fragmento.appendChild($li);
+                            
+                        });
+
+
+                        $xhr.appendChild($fragmento);
+
+
+                    //De lo contrario Muestra el error y la respuesta del servidor
+                    }else{
+
+                    }
+                    //Cambio de boton mostrar a boton borrar
+
+                },700);
+
+            });
+            //Metodos send y open
+        
+        })();
     }
 
-};
-xhr.onerror = (e) =>{
-    console.error(xhr.statusText);
-};
-xhr.send();
 
-});
+};
+
+
+
+//Evento mostrar 
+
+
+
+//Evento borrar y cambio de boton borrar a mostrar
+
 
 
 
