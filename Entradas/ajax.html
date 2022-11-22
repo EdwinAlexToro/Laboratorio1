@@ -111,17 +111,20 @@
                         <fieldset>
                             <legend class="titulo">Ajax</legend>
                             <div class="descripcion"><p>Demostracion, peticion a un servidor con ajax.</p></div>
-                            <input id="inpAjax" type="text" placeholder="https://jsonplaceholder.typicode.com/users">
-                            <div  class="state__container"><p id="state__peticion">status</p></div>
-                            <input id="btnAjax" type="button" value="Check">
+                            <input id="inpAjax" type="text" placeholder="http..."value="https://jsonplaceholder.typicode.com/users">
+                            <div  class="state__container"><p id="state__peticion">Sin iniciar</p></div>
+                            <div class="container__ckeck">
+                                <input id="btnAjax" type="button" value="Check">
+                            </div>
+                            <div class="container__clear">
+                                <input id="btnClear" type="button" value="Clear">
+                            </div>
                             <div class="http__code--container">
-                                <p id="http__response">codigo http</p>
+                                <p id="http__response"></p>
                             </div>
                             <div class="ajax__response--container">
                                 <ol id="ajax__response">
-                                    <li>Nombre: Maria Fernandez</li>
-                                    <li>DNI: 398493029</li>
-                                    <li>Ciudad: Santa Marta</li>
+
                                 </ol>
                             </div>
                             
@@ -145,8 +148,10 @@
 
     </div>
     <script type="text/javascript" src="https://code.jquery.com/jquery-3.6.1.min.js"></script>
-    <script type="text/javascript" src="../js/back.js"></script>
     <script type="text/javascript" src="../js/ajax.js"></script>
+    <script type="text/javascript" src="../js/back.js"></script>
+    <!-- <script type="text/javascript" src="https://kit.fontawesome.com/f64b62abdb.js"></script> -->
+    
 </body>
 
 </html>

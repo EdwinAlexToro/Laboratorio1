@@ -204,8 +204,16 @@ label{
     
 }
 
-#inpAjax::placeholder{
-    font-size: medium;
+#inpAjax{
+    background-color:#0a2e5a;
+    font-size: 30px;
+}
+
+#inpAjax:focus{
+    background-color: rgb(204, 204, 204);
+    font-size: large;
+    padding-left: 5px;
+    width: 100%;
 }
 
 [type="button"]{
@@ -215,6 +223,9 @@ label{
     border: 1px solid #959595;
     line-height: 2;
     border-radius: 5px;
+}
+[type="button"]:hover{
+    background:linear-gradient(#4f6969, #605d67, #043269) ;
 }
 
 .http__code--container{
@@ -243,10 +254,14 @@ label{
     border-radius: 5px;
     background-color: #002971;
     margin-top: 10px;
+    
 }
 #ajax__response{
     font-size: 20px;
     color: azure;
+    list-style-type: none;
+    padding-left: 0px;
+    margin: auto;
 }
 .state__container{
     width: auto;
