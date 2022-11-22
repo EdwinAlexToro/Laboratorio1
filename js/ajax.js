@@ -17,7 +17,7 @@ function peticionAjax(url){
     
     
     if(inpAjax == "" || inpAjax == 0 || inpAjax == null ){
-        document.write("Ingreso al error");
+        console.log("Ingreso al error");
 
         state__peticion.innerHTML = "Comporbando";
 
